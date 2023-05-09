@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->string('photo')->nullable();
             
-            $table->bigInteger('team_id')->nullable();
-            $table->bigInteger('role_id')->nullable();
+            $table->bigInteger('team_id')->unsigned();
+            $table->bigInteger('role_id')->unsigned();
             
             $table->boolean('is_verified')->default(false);
             $table->timestamp('verified_at')->nullable();
